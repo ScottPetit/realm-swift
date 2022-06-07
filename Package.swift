@@ -224,6 +224,9 @@ let package = Package(
                 "Nonsync.swift",
                 "RealmSwift-Info.plist",
                 "Tests",
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-Xfrontend", "-requirement-machine-inferred-signatures=off"])
             ]
         ),
         .target(
